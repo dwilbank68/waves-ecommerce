@@ -120,8 +120,7 @@ class Cart extends Component {
                                 toPay={this.state.total}
                                 transactionCancel={() => this.transactionCancel()}
                                 transactionError={e => this.transactionError(e)}/>
-                    </div>
-                    }
+                    </div>}
                 </div>
             </DashboardNav>
         );

@@ -4,26 +4,17 @@ const {Schema} = mongoose;
 const paymentSchema = new Schema({
     user: {
         type: Array,
-        default: [],
+        default: []
     },
     data: {
         type: Array,
-        default: [],
+        default: []
     },
     products: {
         type: Array,
-        default: [],
+        default: []
     }
-},
-{ timestamps: true }
-);
+});
 
-// const User = mongoose.model('User', brandSchema);
-// module.exports = {User};
-// ----------- NOTE ------------
-// Using module.exports, then requiring it in elsewhere can confuse
-// certain testing frameworks.
-// Instead, bring this in elsewhere using
-// const mongoose = require('mongoose');
-// const User = mongoose.model('User');
+
 mongoose.model('Payment', paymentSchema);

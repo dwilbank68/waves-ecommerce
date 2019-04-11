@@ -7,7 +7,6 @@ const UpdateProfile = () => {
     return (
         <DashboardNav>
             <h1>Profile</h1>
-            heyyyy
             <UpdatePersonalInfo/>
         </DashboardNav>
     );

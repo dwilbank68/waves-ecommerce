@@ -22,7 +22,7 @@ class FileUpload extends Component {
         }
         formData.append('file', files[0]);                                  // 3
         axios
-            .post('/api/users/uploadimage', formData, config)
+            .post('/api/admin/uploadimage', formData, config)
             .then(res => {
                 this.setState({
                     uploading: false,
@@ -39,7 +39,7 @@ class FileUpload extends Component {
 
     onRemove = (id) => {
         axios
-            .get(`/api/users/removeimage?public_id=${id}`)
+            .get(`/api/admin/removeimage?public_id=${id}`)
             .then(res => {
                 let remainingImages = this.state.uploadedFiles.filter(f => {
                     return f.public_id !== id;
@@ -96,22 +96,6 @@ class FileUpload extends Component {
         );
     }
 }
-
-// FileUpload.defaultProps = {};
-// FileUpload.propTypes = {
-//     name:        PropTypes.string.isRequired,
-//     id:          PropTypes.oneOfType([ PropTypes.number, PropTypes.string ]).isRequired,
-//     message:     PropTypes.shape({ title: PropTypes.string, text: PropTypes.string }).isRequired,
-//     comments:    PropTypes.arrayOf(React.PropTypes.object),
-//     date:        PropTypes.instanceOf(Date)
-// };
-//
-// PropTypes -> array, bool, func, number, object, string, symbol
-
-// FileUpload.contextTypes = {
-//     router: React.PropTypes.object.isRequired
-// }
-// (lets you do 'this.context.router.push('/wherever');
 
 export default FileUpload;
 

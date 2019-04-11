@@ -887,6 +887,7 @@ footer .business_nfo .nfo {
 .dropzone_box  .wrap {
     background: #eaeaea;
     height: 100%;
+    width: 150px;
     text-align: center;
     padding-top: 31px;
     box-sizing: border-box;

@@ -11,7 +11,8 @@ const links = [
 const adminLinks = [
     {name:'Site Info', linkTo: '/admin/manage_site'},
     {name:'Add Products', linkTo: '/admin/add_product'},
-    {name:'Manage Categories', linkTo: '/admin/manage_categories'}
+    {name:'Manage Categories', linkTo: '/admin/manage_categories'},
+    {name:'Upload File', linkTo: '/admin/add_file'}
 ]
 
 const DashboardNav = ({children, user}) => {

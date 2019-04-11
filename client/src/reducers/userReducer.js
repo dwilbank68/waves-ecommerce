@@ -11,7 +11,7 @@ const userReducer = (state=INITIAL_STATE, {payload, type}) => {
         case ADD_TO_CART: return {...state, userData:{...state.userData, cart: payload}};
         case GET_CART_ITEMS: return {...state, cartDetails: payload};
         case PAYMENT_SUCCESS: return {
-            ...state, successBuy: payload.success,
+            ...state, successBuy: true,
             userData: {...state.userData, cart: payload.cart},
             cartDetails: payload.cartDetails
         };
